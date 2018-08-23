@@ -1,0 +1,44 @@
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt autoclean
+    4  mkdir innopolis_os
+    5  ls
+    6  cd innopolis_os
+    7  mkdir week_1
+    8  cd week_1/
+    9  exit
+   10  cd innopolis_os/
+   11  cd week_1/
+   12  ls /usr/bin --reverse
+   13  >ex1.txt
+   14  ls /usr/bin --reverse > ex1_txt
+   15  ls
+   16  rm ex1_txt
+   17  ls
+   18  ls ex1.txt
+   19  head ex1_txt
+   20  head ex1.txt
+   21  nano ex1.txt
+   22  ls
+   23  rm ex`.txt
+   24  rm ex1.txt
+   25  ls
+   26  ls /usr/bin --reverse > ex1.txt
+   27  ls
+   28  head ex1.txt
+   29  whoami
+   30  hostname
+   31  man weeks_1
+   32  man man
+   33  --help
+   34  ls --help
+   35  head week_1
+   36  tail ex1.txt
+   37  > nothing.txt
+   38  ls
+   39  mv nothing.txt still_nothing.txt
+   40  ls
+   41  rf still_nothing.txt
+   42  rm still_nothing.txt
+   43  ls
+   44  history > ex2.txt
