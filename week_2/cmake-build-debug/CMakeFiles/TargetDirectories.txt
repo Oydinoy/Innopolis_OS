@@ -1,3 +1,0 @@
-/cygdrive/c/Users/ADMIN/Desktop/Study/OS/week_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/ADMIN/Desktop/Study/OS/week_2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/ADMIN/Desktop/Study/OS/week_2/cmake-build-debug/CMakeFiles/week_2.dir
