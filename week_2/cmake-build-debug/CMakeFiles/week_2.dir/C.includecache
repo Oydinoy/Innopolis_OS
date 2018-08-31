@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/ADMIN/Desktop/Study/OS/week_2/main.c
+stdio.h
+-
+limits.h
+-
+float.h
+-
+stdlib.h
+-
+
