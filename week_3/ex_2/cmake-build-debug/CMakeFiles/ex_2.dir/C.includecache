@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/ADMIN/Documents/GitHub/Innopolis_OS/week_3/ex_2/main.c
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+

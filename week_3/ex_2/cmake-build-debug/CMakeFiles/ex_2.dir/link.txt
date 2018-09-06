@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/ex_2.dir/main.c.o  -o ex_2.exe -Wl,--out-implib,libex_2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
