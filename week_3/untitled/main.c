@@ -89,21 +89,21 @@ void delete_node(struct linked_list *list) {
         } else { is_stupid = 0; }
     }
 
-    struct node temp;
-    temp = *list->head;
+    struct node *temp;s
+    temp = list->head;
     if (command == 1) {
         list->head = list->head->next;
     } else if (command == list->size) {
-        for (int i = 1; i < list->size; i++) {
-            temp = *temp.next;
+        while (temp->next->next != 0) {
+            temp = temp->next;
         }
-        list->tail = &temp;
-        temp.next = 0;
+        temp->next = 0;
+        list->tail = temp;
     } else {
-        for (int i = 1; i < command; i++) {
-            temp = *temp.next;
+        for (int i = 1; i < command -1; i++) {
+            temp = temp->next;
         }
-        temp.next = temp.next->next;
+        temp->next = temp->next->next;
     }
     printf("The node was successfully deleted:)\n");
 }
@@ -115,6 +115,7 @@ int main() {
     insert_node(&list);
     insert_node(&list);
     print_list(&list);
-    
+    delete_node(&list);
+    print_list(&list);
     return 0;
 }
