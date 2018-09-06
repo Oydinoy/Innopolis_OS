@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct node {
     int data;
@@ -13,13 +14,13 @@ struct linked_list {
 
 void print_list(struct linked_list *l) {
     printf("Here is the data hold in the list:\n");
-    struct node temp;
-    temp = *l->head;
-    while (temp.next != l->tail) {
-        printf("%d ", temp.data);
-        temp = *(temp.next);
+    struct node *temp;
+    temp = l->head;
+    while (temp->next != 0) {
+        printf("%d ", temp->data);
+        temp = (temp->next);
     }
-    printf("%d ", l->tail->data);
+    printf("%d \n", l->tail->data);
 }
 
 void insert_node(struct linked_list *list) {
@@ -27,35 +28,39 @@ void insert_node(struct linked_list *list) {
     if (list->size == 0) {
         printf("This is our first node. What data you want to have in it?\n");
         scanf("%d", &command);
-        struct node new;
-        new.data = command;
-        new.next = 0;
-        list->tail = &new;
-        list->head = &new;
+        struct node *new;
+        new = malloc(sizeof(struct node));
+        new->data = command;
+        new->next = 0;
+        list->tail = new;
+        list->head = new;
         list->size = 1;
     } else {
         printf("Enter 1 if you want to insert to the beginning or 2 for inserting to the end:)\n");
         int is_stupid;
         is_stupid = 1;
         scanf("%d", &command);
-        struct node new;
         while (is_stupid) {
             if (command == 1) {
+                struct node *new;
+                new = malloc(sizeof(struct node));
                 is_stupid = 0;
                 printf("Enter the data you want to have in the node\n");
                 scanf("%d", &command);
-                new.data = command;
-                new.next = list->head;
-                list->head = &new;
+                new->data = command;
+                new->next = list->head;
+                list->head = new;
                 list->size++;
             } else if (command == 2) {
+                struct node *new;
+                new = malloc(sizeof(struct node));
                 is_stupid = 0;
                 printf("Enter the data you want to have in the node\n");
                 scanf("%d", &command);
-                new.data = command;
-                new.next = 0;
-                list->tail->next = &new;
-                list->tail = &new;
+                new->data = command;
+                new->next = 0;
+                list->tail->next = new;
+                list->tail = new;
                 list->size++;
             } else {
                 printf("Enter only 1 or 2, please\n");
@@ -65,7 +70,6 @@ void insert_node(struct linked_list *list) {
     }
     printf("The node is successfully added:)\n");
 }
-
 
 void delete_node(struct linked_list *list) {
     printf("which node do you want to delete?\n");
@@ -111,5 +115,6 @@ int main() {
     insert_node(&list);
     insert_node(&list);
     print_list(&list);
+    
     return 0;
 }
