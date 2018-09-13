@@ -11,7 +11,7 @@ void read(char *command){
     scanf("%s", command);
 }
 
-int main(void) {
+int main() {
     char *command = malloc(sizeof(char) * 256);
 
     while (1){
