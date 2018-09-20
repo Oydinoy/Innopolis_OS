@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "1 4 65 3 76 8\n" > toWork.txt
+echo "0\n" > toWork.txt
 
 while true
 do
