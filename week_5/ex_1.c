@@ -1,13 +1,14 @@
 #include <stdio.h>
-#include <pthread.h>;
+#include <pthread.h>
+#define number 10;
 
 void *todo(void *argp) {
     printf("\tThread № %d is simulating work\n", *(int *) argp);
 }
 
 int main() {
-    pthread_t threads[10];
-    for (int i = 1; i <= 10; i++) {
+    pthread_t threads[number];
+    for (int i = 1; i <= number; i++) {
         printf("\nThread № %d is created and starts working\n", i);
         int arg = i;
         pthread_create(&threads[i], 0, todo, &arg);
