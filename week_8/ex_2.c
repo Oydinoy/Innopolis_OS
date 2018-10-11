@@ -9,5 +9,6 @@ int main() {
         memset(v, 0, 10240);
         sleep(1);
     }
+    return 0;
 }
 
