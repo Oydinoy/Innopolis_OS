@@ -1,0 +1,5 @@
+There was no output.
+Here are the anwers:
+    1. 660 means r&w for only user and group
+    2. 775 means all permissions for user and group, r&w for others
+    3. 777 means all permissions for everyone
