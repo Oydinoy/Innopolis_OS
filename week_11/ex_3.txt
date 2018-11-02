@@ -1,1 +1,8 @@
-The difference is that in the second program
+As we know (or learned just now because of this exercise), printf uses line buffering.
+That means that the program collect every output in buffer, while doesn't find a line end
+symbol. After it finds it, it prints the data from buffer, cleans itself and bigins again.
+First program:
+    As there wasn't a line ender after the string, the program created the second fork with the similar buffer and the added the line enders -> we had two "Hello"s and line enders.
+Second program:
+    As there was a line ender before forking, after the forking there became two empty buffers, which printed empty line in the end.
+That's what happened:)
