@@ -1,0 +1,19 @@
+1)If we haven't got info in advance:
+	avoidance is useless
+	recovery takes quite a lot of time (overall). 
+		preemption is the best way in recovery, but we can't always take a resource from a proccess without noticing, so it's not always reliable
+		rollback takes additional space (the only one in recovery) so isn't reliable if we are out of space (or have a few)
+		killing proccess is actually the worse way of dealing with deadlock as some already produced info might be used or it will fail a real time system
+	prevention IS THE BEST APPROACH HERE
+		Mutual ex will work good even if we don't have a lot of space 
+		Hold and Wait and no preemption can take more time, but won't crush real time system
+		Circular wait is the best one (if we have some add space)
+2)If we have got info in advance
+	avoidance IS THE BEST APPROACH HERE (as is the most reliable and quite fast)
+	recovery takes more time
+	prevention is good enough
+3)If the hardware can run only few proccesses at one time (old machines, around 2-3 proc.)
+	recovery IS THE BEST APPROACH HERE (as it is easy to implement and we don't really need the complicated deadlock dealer)
+	
+	 
+	
